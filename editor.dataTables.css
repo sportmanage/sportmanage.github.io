@@ -44,6 +44,9 @@ div.DTE div.DTE_Form_Error {
   padding: 5px;
   display: none;
   color: #b11f1f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 div.DTE button.btn,
 div.DTE div.DTE_Form_Buttons button {
@@ -733,12 +736,6 @@ div.DTED_Lightbox_Wrapper div.DTED_Lightbox_Container div.DTED_Lightbox_Content_
   box-sizing: border-box;
   background: #fcfcfc;
 }
-div.DTED_Lightbox_Wrapper div.DTED_Lightbox_Container div.DTED_Lightbox_Content_Wrapper div.DTED_Lightbox_Content div.DTE div.DTE_Body_Content div.DTE_Form_Error {
-  padding: 0 1em 1em 1em;
-}
-div.DTED_Lightbox_Wrapper div.DTED_Lightbox_Container div.DTED_Lightbox_Content_Wrapper div.DTED_Lightbox_Content div.DTE div.DTE_Body_Content div.DTE_Form_Error:empty {
-  padding: 0;
-}
 div.DTED_Lightbox_Wrapper div.DTED_Lightbox_Container div.DTED_Lightbox_Content_Wrapper div.DTED_Lightbox_Content div.DTE div.DTE_Footer {
   right: 0;
   width: auto;
@@ -771,6 +768,17 @@ div.DTED_Lightbox_Wrapper div.DTED_Lightbox_Container div.DTED_Lightbox_Content_
 div.DTED_Lightbox_Wrapper div.DTED_Lightbox_Container div.DTED_Lightbox_Content_Wrapper div.DTED_Lightbox_Content div.DTED_Lightbox_Close:hover {
   background-color: #092079;
   box-shadow: 2px 2px 9px #111;
+}
+
+div.DTED_Lightbox_Wrapper div.DTE_Footer {
+  display: flex;
+  justify-content: end;
+}
+div.DTED_Lightbox_Wrapper div.DTE_Footer_Content {
+  display: none;
+}
+div.DTED_Lightbox_Wrapper div.DTE.inFormError div.DTE_Footer {
+  justify-content: space-between;
 }
 
 div.DTED_Lightbox_Background {
